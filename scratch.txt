@@ -1,0 +1,10 @@
+source file
+parse agenda forest
+load into program memory 
+keyword similarity
+
+
+grocery
+	-vegetables
+	-meat
+
