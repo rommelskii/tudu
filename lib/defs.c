@@ -1,3 +1,7 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include "defs.h"
+
 struct TreeNode {
 	char* val;	
 	struct TreeNode* children;
