@@ -8,6 +8,10 @@ struct TreeNode {
 };
 
 struct TreeNode* createTreeNode(char* v) {
+	/*
+	 * creates an individual tree node 
+	 * argument: initial value for tree node
+	 */
 	const size_t STR_ARG_LEN = strlen(v);
 	if (STR_ARG_LEN == 0) {
 		fprintf(stderr, "Error: cannot create a node with an empty char val\n");
@@ -21,4 +25,17 @@ struct TreeNode* createTreeNode(char* v) {
 	newNode->children = NULL;
 
 	return newNode;
+}
+
+int addChildren(struct TreeNode* dest, struct TreeNode* ch) {
+	/*
+	 * assigns linked list or individual node 'ch' to a node 'dest'
+	 * argument: linked list of children
+	 */
+	if (dest == NULL || ch == NULL) {
+		fprintf(stderr, "Error: destination or children cannot be null\n");
+		return -1;
+	}
+	dest->children = ch;
+	return 1;
 }
